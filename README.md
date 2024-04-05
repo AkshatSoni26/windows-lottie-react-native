@@ -1,24 +1,26 @@
-#step 1.
+# step 1.
 install dependenices 'npm i'
 
-#step 2.
+# step 2.
 goto 'windows\sampleDesktop\sampleDesktop.vcxproj' this file and add this code to after this "Microsoft.Cpp.targets"
 
-`<PropertyGroup Label="LottieReactNativeProps">
+`
+<PropertyGroup Label="LottieReactNativeProps">
     <LottieReactNativeDir>$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), 'node_modules\lottie-react-native\package.json'))\node_modules\lottie-react-native</LottieReactNativeDir>
 </PropertyGroup>
 <ImportGroup Label="LottieReactNativeTargets">
     <Import Project="$(LottieReactNativeDir)\src\windows\cppwinrt\PropertySheets\LottieGen.Auto.targets" />
-</ImportGroup>`
+</ImportGroup>
+`
 
-#step 3.
+# step 3.
 
 install these NuGet packages:
 
 LottieGen.MsBuild
 Microsoft.UI.Xaml
 
-#step 4.
+# step 4.
 add this code to 'windows\sampleDesktop\App.cpp' this file
 
 `
@@ -31,7 +33,7 @@ PackageProviders().Append(winrt::LottieReactNative::ReactPackageProvider(winrt::
 `
 
 
-#system info:- 
+# system info:- 
 
 .NET SDK:
  Version:           8.0.202
@@ -96,9 +98,9 @@ Other architectures found:
     registered at [HKLM\SOFTWARE\dotnet\Setup\InstalledVersions\x86\InstallLocation]
 
 
-#problem:- 
+# problem:- 
 `× Building Solution: F:\sampleDesktop\windows\sampleDesktop\sampleDesktop.vcxproj(167,5): error MSB4019: The imp...
  × Build failed with message F:\sampleDesktop\windows\sampleDesktop\sampleDesktop.vcxproj(167,5): error MSB4019: The imported project "F:\sampleDesktop\node_modules\lottie-react-native\src\windows\cppwinrt\PropertySheets\LottieGen.Auto.targets" was not found. Confirm that the expression in the Import declaration "F:\sampleDesktop\node_modules\lottie-react-native\src\windows\cppwinrt\PropertySheets\LottieGen.Auto.targets" is correct, and that the file exists on disk.. Check your build configuration.
 Command failed. Re-run the command with --logging for more information.`
 
-#expected:- solution should build.
+# expected:- solution should build.
