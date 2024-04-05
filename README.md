@@ -1,4 +1,4 @@
-# steps to reprodce
+# steps to reproduce
 
 ## step 1.
 install dependenices `npm i`
