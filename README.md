@@ -103,7 +103,7 @@ Other architectures found:
 
 ## problem:- 
 
-> [!WARNING]  
+> [!CAUTION]  
 > × Building Solution: F:\sampleDesktop\windows\sampleDesktop\sampleDesktop.vcxproj(167,5): error MSB4019: The imp...
 > × Build failed with message F:\sampleDesktop\windows\sampleDesktop\sampleDesktop.vcxproj(167,5): error MSB4019: The imported project > "F:\sampleDesktop\node_modules\lottie-react-native\src\windows\cppwinrt\PropertySheets\LottieGen.Auto.targets" was not found. Confirm that > the expression in the Import declaration "F:\sampleDesktop\node_modules\lottie-react-native\src\windows\cppwinrt\PropertySheets\LottieGen.Auto.targets" is correct, and that the file exists on disk.. Check your build configuration.
 Command failed. Re-run the command with --logging for more information.
