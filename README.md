@@ -1,5 +1,5 @@
 # step 1.
-install dependenices 'npm i'
+install dependenices `npm i`
 
 # step 2.
 goto 'windows\sampleDesktop\sampleDesktop.vcxproj' this file and add this code to after this `Microsoft.Cpp.targets`
